@@ -1,0 +1,42 @@
+# Como se habrán dado cuenta, la tabla de invoices, perdió el dato de total, por lo tanto es necesario que podamos recalcular con los datos que dispone entre sales, invoices y products.
+
+## Realizar las siguientes tareas:
+
+1. Crear un app que permita cargar los datos del json al storage respectivo.
+
+2. Crear un método endpoint que permita actualizar los datos de invoices.
+
+## Nuevas Consultas a realizar:
+
+1. Montos totales redondeados a 2 decimales por condition del customer
+
+Salida esperada:
+
+# Condition             Total
+  Inactivo ( 0 )        605929.10
+  Activo ( 1 )          716792.33
+
+2. Top 5 de los products más vendidos y sus cantidades vendidas
+
+Salida esperada: 
+
+# Description                   Total
+  Vinegar - Raspberry           660
+  Flour - Corn, Fine            521
+  Cookie - Oatmeal              467
+  Pepper - Red Chili            439
+  Chocolate - Milk Coating      436
+
+3. El Top 5 de los customers activos que gastaron la mayor cantidad de dinero 
+
+Salida esperada: 
+
+# First Name    Last name       Amount
+  Lannie        Tortis          58513.55
+  Jasen         Crowcum         48291.03
+  Elvina        Ovell           43590.75
+  Lazaro        Anstis          40792.06
+  Wilden        Oaten           39786.79
+
+  * Realizar test unitarios sobre las nuevas funcionalidades a incorporar en los storages respectivos, utilizando el paquete go-txdb (aclaración: algunas consultas utilizan inner join)
+  * Crear los handlers y registrarlos en endpoints.
